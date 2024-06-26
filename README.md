@@ -58,17 +58,19 @@ The RAG-based PDF Query System is designed to:
     nltk.download('punkt')
     ```
 
+5. **Create a `.env` file in the project root directory:**
+    ```text
+    OPENAI_API_KEY=your_openai_api_key_here
+    ```
+
 ### Running the Application
 
-1. **Set up OpenAI API Key:**
-    Replace `'YOUR_API_KEY'` in the `generate.py` file with your actual OpenAI API key.
-
-2. **Run the Streamlit application:**
+1. **Run the Streamlit application:**
     ```bash
     streamlit run app.py
     ```
 
-3. **Use the Application:**
+2. **Use the Application:**
     - Open the URL provided by Streamlit (usually `http://localhost:8501`) in your web browser.
     - Upload one or more PDF files.
     - Enter your query in the input box.
