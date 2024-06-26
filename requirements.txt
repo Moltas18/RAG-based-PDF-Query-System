@@ -3,3 +3,4 @@ PyMuPDF
 nltk
 scikit-learn
 openai
+python-dotenv
