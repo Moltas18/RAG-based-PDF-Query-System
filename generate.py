@@ -1,6 +1,13 @@
-import openai
+import os
 
-openai.api_key = 'YOUR_API_KEY'  # Replace with your OpenAI API key
+import openai
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Retrieve the OpenAI API key from the environment variable
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 def generate_response(retrieved_texts, query, max_tokens=150):
     """
