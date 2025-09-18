@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Retrieve the OpenAI API key from the environment variable
-openai.api_key = os.getenv('OPENAI_API_KEY')
+client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 def generate_response(retrieved_texts, query, max_tokens=150):
     """
@@ -24,15 +24,13 @@ def generate_response(retrieved_texts, query, max_tokens=150):
     context = "\n".join(retrieved_texts)
     prompt = f"Context: {context}\n\nQuestion: {query}\n\nAnswer:"
     
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt}
         ],
         max_tokens=max_tokens,
-        n=1,
-        stop=None,
         temperature=0.5,
     )
-    return response.choices[0].message['content']
+    return response.choices[0].message.content

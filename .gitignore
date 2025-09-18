@@ -1,0 +1,73 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.pklz
+*.egg-info/
+*.so
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+*.ipynb
+*.ipynb_convert/
+
+# Logs
+*.log
+logs/
+*.out
+*.err
+
+# System / OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
+*.lock
+poetry.lock
+Pipfile.lock
+
+# Data / PDFs (don’t commit local documents)
+data/
+pdfs/
+*.pdf
+
+# Embeddings / Vector store indexes
+*.faiss
+*.npy
+*.npz
+*.pkl
+
+# Credentials / API keys
+*.json
+*.yaml
+*.yml
+config/
+secrets/
+openai_api_key.txt
+
+# Build / Dist
+build/
+dist/
+*.egg
+*.egg-info/
+
+# Streamlit
+.streamlit/
+
+# Cache
+.cache/
